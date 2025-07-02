@@ -47,7 +47,7 @@ class CheckListApp:
             task_frame.pack(fill="x", pady=2)
 
             var = IntVar(value=done)
-            cb = Checkbutton(task_frame, text=task, variable=var,
+            cb = Checkbutton(task_frame, text=f"{task} (Date: {date_posted}, Time: {time_posted})", variable=var,
                                 command=lambda id=task_id, v=var: self.toggle_task(id, v))
             cb.pack(side="left", anchor="w")
             if done:
